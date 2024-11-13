@@ -1,13 +1,11 @@
-# ❗CSC226 Final Project
+# CSC226 Final Project
 
 ## Instructions
 
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
 
-❗️**Author(s)**: Your name(s) here
+Luis Olivas, Puskar Chapagain
 
-❗️**Google Doc Link**: Your link here
+**Google Doc Link**: Your link here
 
 ---
 
@@ -20,11 +18,11 @@ helped you, AI tools you've used, and any other resources that are not solely yo
 
 ## Milestone 1: Setup, Planning, Design
 
-❗️**Title**: `What is the title of your project? Be creative! Replace this block of text.`
+**Title**: `Ai Journal`
 
-❗**Purpose**: `In a single sentence, describe WHAT your project will do. Replace this block of text.`
+**Purpose**: `Building a journal that works like a diary with AI feedback.`
 
-❗️**Source Assignment(s)**: `List which original assignments you will base your project on? Replace this block of text.`
+**Source Assignment(s)**: `It's gonna be all orignial, based on functions and classes.`
 
 ❗️**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
