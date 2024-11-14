@@ -44,7 +44,7 @@ into your own, following the process we've discussed in previous assignments:
 
 ```
     Branch 1 name: PuskarC
-    Branch 2 name: rockero241
+    Branch 2 name: Rockero241
 ```
 ---
 
