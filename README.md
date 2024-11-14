@@ -5,9 +5,9 @@
 ❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
   they accompany. (This means that your final README should have no ❗️in it!)
 
-❗️**Author(s)**: Puskar Chapagain and Luis Olivas 
+**Author(s)**: Puskar Chapagain and Luis Olivas 
 
-❗️**Google Doc Link**: https://docs.google.com/document/d/1wwVxXResdXgnSNOUyVShT_KIM4bZyGQ4qYcmgkZTc7c/edit?usp=sharing
+**Google Doc Link**: https://docs.google.com/document/d/1wwVxXResdXgnSNOUyVShT_KIM4bZyGQ4qYcmgkZTc7c/edit?usp=sharing
 
 ---
 
@@ -16,6 +16,7 @@ Throughout this project, you have likely used outside resources. Reference all i
 and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update as you go.
 
+CHATGPT - Helped with organizing our project into 4 different classes
 ---
 
 ## Milestone 1: Setup, Planning, Design
@@ -43,8 +44,8 @@ branch) as they work. When you need to bring each others branches together, do s
 into your own, following the process we've discussed in previous assignments: 
 
 ```
-    Branch 1 name: _____________
-    Branch 2 name: _____________
+    Branch 1 name: PuskarC
+    Branch 2 name: Rockero241
 ```
 ---
 
