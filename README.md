@@ -57,7 +57,7 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    ** Initially, it's been a challenge to break down this program into smaller tasks, knowing how to divide and conquer, and where to get started. We feel a little behind, but we're getting on it.
 ```
 
 ---
