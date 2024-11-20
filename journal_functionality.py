@@ -1,5 +1,5 @@
-import os, date
-from datetime
+import os
+from datetime import datetime
 
 class Journal:
     """
@@ -17,158 +17,14 @@ class Journal:
         Format the journal entry for saving to a file
         :return:
         """
-        return {
+        return (
             f"Date: {self.date}\n"
             f"Mood: {self.mood}\n\n"
-            f"What went well:\n{self.what_went_well}\n\n"
-            f"What could have gone better:\n{self.what_could_be_better}\n\n"
+            f"What went well:\n{self.grattitude}\n\n"
+            f"What could have gone better:\n{self.room_for_growth}\n\n"
             f"Thoughts:\n{self.thoughts}\n"
             f"{'-' * 40}\n"
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Write:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        )
 
 class JournalApp:
     """
@@ -235,13 +91,6 @@ class JournalApp:
 
         print(f"Your journal entry has been saved to {filename}.")
 
-
-
-
-
-
-
-def main():
-    pass
-
-main()
+if __name__ == "__main__":
+    app = JournalApp()
+    app.run()
