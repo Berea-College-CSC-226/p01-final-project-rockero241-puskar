@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import date
 
 class Journal:
     """
@@ -64,7 +64,7 @@ class JournalApp:
         Collects user input to create a new journal entry.
         """
         # Get the current date
-        today = datetime.date.today().strftime("%Y-%m-%d")
+        today = date.today().strftime("%Y-%m-%d")
         print("\nLet's reflect on your day:")
         mood = input("How are you doing today? (great, good, meh, bad): ").strip()
         gratitude = input("What are you grateful for today?: ").strip()
@@ -82,7 +82,7 @@ class JournalApp:
         Saves a journal entry to a new file with a unique timestamp.
         """
         # Use the current date and time for a unique filename
-        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        timestamp = date.today().strftime("%Y-%m-%d")
         filename = f"journal_{timestamp}.txt"
 
         # Writing the formatted entry to the file
