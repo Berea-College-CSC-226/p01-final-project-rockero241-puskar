@@ -17,10 +17,10 @@ class Journal:
     """
     Represents a single journal entry
     """
-    def __init__(self, date, mood, grattitude, room_for_growth, thoughts):
+    def __init__(self, date, mood, gratitude, room_for_growth, thoughts):
         self.date = date
         self.mood = mood
-        self.grattitude = grattitude
+        self.gratitude = gratitude
         self.room_for_growth = room_for_growth
         self.thoughts = thoughts
 
@@ -32,7 +32,7 @@ class Journal:
         return (
             f"Date: {self.date}\n"
             f"Mood: {self.mood}\n\n"
-            f"What went well:\n{self.grattitude}\n\n"
+            f"What went well:\n{self.gratitude}\n\n"
             f"What could have gone better:\n{self.room_for_growth}\n\n"
             f"Thoughts:\n{self.thoughts}\n"
             f"{'-' * 40}\n"
@@ -63,7 +63,20 @@ class JournalApp:
             if choice == "1":
                 # Create and save a new journal entry
                 entry = self.create_entry()
-                self.save_entry_to_file(entry)
+
+
+                feedback_choice = int(input("Would you like to get AI feedback on your journal entry?\n(1 = Yes, 0 = No): "))
+                feedback = None
+                while (feedback_choice != 1) and (feedback_choice != 0):
+                    feedback_choice = int(input("Would you like to get AI feedback on your journal entry?\n(1 = Yes, 0 = No): "))
+                if feedback_choice == 1:
+                    feedback = self.get_ai_feedback(entry)
+                    print("\nAI Feedback on your journal entry:")
+                    print(feedback)
+                else:
+                    print("Skipping AI Feedback")
+
+                self.save_entry_to_file(entry, feedback)
             elif choice == "2":
                 # Exit the program
                 print("Goodbye! Have a great time")
@@ -115,7 +128,7 @@ class JournalApp:
             return f"Error during AI API call: {e}"
 
 
-    def save_entry_to_file(self, entry):
+    def save_entry_to_file(self, entry, feedback):
         """
         Saves a journal entry to a new file with a unique timestamp.
         """
@@ -126,6 +139,9 @@ class JournalApp:
         # Writing the formatted entry to the file
         with open(filename, "w") as file:
             file.write(entry.format_entry())
+            if feedback:
+                file.write("\nAI Feedback:\n")
+                file.write(feedback)
 
         print(f"Your journal entry has been saved to {filename}.")
 
