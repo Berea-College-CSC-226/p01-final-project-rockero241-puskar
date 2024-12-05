@@ -106,25 +106,35 @@ class JournalApp:
         """
         Sends the journal entry to the OpenAI API for analysis and feedback.
         """
-        prompt = (
-            f"Analyze the following journal entry and provide feedback:\n\n"
-            f"Date: {entry.date}\n"
-            f"Mood: {entry.mood}\n"
-            f"What went well:\n{entry.gratitude}\n"
-            f"What could have gone better:\n{entry.room_for_growth}\n"
-            f"Thoughts:\n{entry.thoughts}\n\n"
-            f"Provide positive, constructive feedback and suggest improvements."
-        )
-
         try:
-            response = openai.Completion.create(
-                engine="text-davinci-003",
-                prompt=prompt,
+            # Construct the prompt as a list of messages
+            messages = [
+                {"role": "system",
+                 "content": "You are a helpful assistant that provides constructive feedback on journal entries."},
+                {"role": "user", "content": (
+                    f"Analyze the following journal entry and provide feedback:\n\n"
+                    f"Date: {entry.date}\n"
+                    f"Mood: {entry.mood}\n"
+                    f"What went well:\n{entry.gratitude}\n"
+                    f"What could have gone better:\n{entry.room_for_growth}\n"
+                    f"Thoughts:\n{entry.thoughts}\n\n"
+                    f"Provide positive, constructive feedback and suggest improvements."
+                )}
+            ]
+
+            # Call the OpenAI ChatCompletion API
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",  # Use "gpt-4" if you have access
+                messages=messages,
                 max_tokens=150,
                 temperature=0.7
             )
-            return response["choices"][0]["text"].strip()
+
+            # Return the AI feedback from the response
+            return response['choices'][0]['message']['content'].strip()
+
         except Exception as e:
+            # Catch and return any errors
             return f"Error during AI API call: {e}"
 
 
