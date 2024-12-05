@@ -1,5 +1,17 @@
 import os
 from datetime import date
+import openai
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Fetch the key from .env
+
+# Validate API key
+if not OPENAI_API_KEY:
+    raise ValueError("API key not found. Make sure it is set in the .env file.")
+
+openai.api_key = OPENAI_API_KEY  # Set the OpenAI API key
 
 class Journal:
     """
@@ -76,6 +88,32 @@ class JournalApp:
         self.entries.append(entry)
         print("Your journal entry has been created!")
         return entry
+
+    def get_ai_feedback(self, entry):
+        """
+        Sends the journal entry to the OpenAI API for analysis and feedback.
+        """
+        prompt = (
+            f"Analyze the following journal entry and provide feedback:\n\n"
+            f"Date: {entry.date}\n"
+            f"Mood: {entry.mood}\n"
+            f"What went well:\n{entry.gratitude}\n"
+            f"What could have gone better:\n{entry.room_for_growth}\n"
+            f"Thoughts:\n{entry.thoughts}\n\n"
+            f"Provide positive, constructive feedback and suggest improvements."
+        )
+
+        try:
+            response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt=prompt,
+                max_tokens=150,
+                temperature=0.7
+            )
+            return response["choices"][0]["text"].strip()
+        except Exception as e:
+            return f"Error during AI API call: {e}"
+
 
     def save_entry_to_file(self, entry):
         """
