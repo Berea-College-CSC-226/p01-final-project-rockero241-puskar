@@ -66,14 +66,14 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `70%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this text with your reflection
+    ** We're very confident we'll finish the project in time because we've already done most of the legwork for the AI API, all there is left is to get it working and make the GUI.**
 ```
 
 ---
