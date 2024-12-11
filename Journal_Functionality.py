@@ -43,7 +43,7 @@ def get_ai_feedback(entry):
     Get AI feedback for a journal entry using OpenAI.
     """
     messages = [
-        {"role": "system", "content": "You are a helpful assistant who gives constructive feedback on journal entries."},
+        {"role": "system", "content": "You are a wise life coach who provides feedback based on a user's journaling entry, and gives simple, straightforward and practical advice. Make sure to be relevant to what the user journaled today"},
         {"role": "user", "content": (
             f"Here's my journal entry:\n\n"
             f"Date: {entry.date}\n"
