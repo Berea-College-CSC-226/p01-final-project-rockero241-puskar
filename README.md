@@ -89,6 +89,8 @@ and their day as a Journal Entry. Once the user gives all the information, the p
 AI feedback on their reflection. If the user inputs 'NO' the program ends there but if the user inputs 'Yes' the program 
 provides AI feedback based on the user's input. **
 
+** After hitting run, the program will run immideately  **
+
 ### ❗Errors and Constraints
 Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
 You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
