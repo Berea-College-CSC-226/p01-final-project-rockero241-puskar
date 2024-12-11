@@ -46,6 +46,7 @@ into your own, following the process we've discussed in previous assignments:
 ```
     Branch 1 name: PuskarC
     Branch 2 name: Rockero241
+    Branch 3 name: New3
 ```
 ---
 
@@ -83,6 +84,10 @@ Indicate what percentage of the project you have left to complete and how confid
 ### ❗User Instructions
 In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
 in PyCharm. 
+    ** Basically, once the user hits the Run button, the program asks the user some questions to reflect on their mood
+and their day as a Journal Entry. Once the user gives all the information, the program then asks the user if they want 
+AI feedback on their reflection. If the user inputs 'NO' the program ends there but if the user inputs 'Yes' the program 
+provides AI feedback based on the user's input. **
 
 ### ❗Errors and Constraints
 Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
