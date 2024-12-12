@@ -1,3 +1,15 @@
+######################################################################
+# Authors: Luis Olivas, Puskar Chapagain
+# Usernames: rockero241, PuskarC
+#
+# Assignment: P01: Final project
+######################################################################
+# Acknowledgements:
+#ChatGPT, Scott Heggen
+
+# licensed under a Creative Commons
+# Attribution-Noncommercial-Share Alike 3.0 United States License.
+####################################################################################
 import os
 from datetime import date
 from openai import OpenAI
